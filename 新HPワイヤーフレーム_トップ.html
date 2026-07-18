@@ -1,0 +1,154 @@
+<title>トレル探偵社 新トップページ ワイヤーフレーム</title>
+<style>
+  :root { --ink:#1f2430; --sub:#5b6472; --line:#c9cfd8; --bg:#f4f6f9; --box:#ffffff; --accent:#2b5aa0; --note:#b3541e; }
+  body { font-family:"Hiragino Sans","Noto Sans JP",sans-serif; background:var(--bg); color:var(--ink); margin:0; line-height:1.7; }
+  .frame { max-width:900px; margin:0 auto; padding:16px; }
+  .notice { background:#fff7e8; border:1px solid #e8c98a; color:#7a5210; padding:10px 14px; border-radius:8px; font-size:13px; margin-bottom:16px; }
+  section { background:var(--box); border:1px solid var(--line); border-radius:10px; padding:20px 22px; margin-bottom:14px; position:relative; }
+  .tag { position:absolute; top:-10px; left:14px; background:var(--accent); color:#fff; font-size:11px; padding:2px 10px; border-radius:99px; letter-spacing:.05em; }
+  .anno { color:var(--note); font-size:12px; margin-top:10px; border-top:1px dashed var(--line); padding-top:8px; }
+  h1 { font-size:26px; margin:8px 0 6px; }
+  h2 { font-size:19px; margin:0 0 12px; }
+  h3 { font-size:15px; margin:14px 0 4px; }
+  p { margin:6px 0; }
+  .sub { color:var(--sub); font-size:14px; }
+  .img { background:repeating-linear-gradient(45deg,#e8ecf2,#e8ecf2 10px,#f2f5f9 10px,#f2f5f9 20px); border:1px dashed var(--line); border-radius:8px; display:flex; align-items:center; justify-content:center; color:var(--sub); font-size:13px; min-height:120px; }
+  .cta-row { display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 4px; }
+  .btn { padding:12px 18px; border-radius:8px; font-size:14px; font-weight:600; }
+  .btn.primary { background:var(--accent); color:#fff; }
+  .btn.line { background:#1fa84f; color:#fff; }
+  .btn.tel { background:#fff; border:2px solid var(--accent); color:var(--accent); }
+  .cols { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px; }
+  .card { border:1px solid var(--line); border-radius:8px; padding:14px; background:#fbfcfe; }
+  table { border-collapse:collapse; width:100%; font-size:14px; }
+  th,td { border:1px solid var(--line); padding:8px 10px; text-align:left; }
+  th { background:#eef2f7; }
+  .price { font-size:22px; font-weight:700; color:var(--accent); }
+  ol.flow { counter-reset:s; list-style:none; padding:0; margin:0; }
+  ol.flow li { counter-increment:s; padding:10px 0 10px 44px; position:relative; border-bottom:1px dashed var(--line); }
+  ol.flow li:before { content:counter(s); position:absolute; left:0; top:10px; width:30px; height:30px; border-radius:50%; background:var(--accent); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; }
+  .faq dt { font-weight:700; margin-top:10px; }
+  .faq dd { margin:2px 0 0 0; color:var(--sub); }
+  .todo { background:#fdeeee; color:#8a2b2b; border-radius:4px; padding:0 4px; font-size:12px; }
+  footer.cta { background:var(--ink); color:#fff; border-radius:10px; padding:26px 22px; text-align:center; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8ebf1; --sub:#a7afbd; --line:#3a4150; --bg:#14171d; --box:#1d222b; }
+    .card { background:#232936; } th { background:#232936; }
+    .notice { background:#3a2f18; border-color:#6b5426; color:#e8c98a; }
+    .img { background:repeating-linear-gradient(45deg,#232936,#232936 10px,#2a3140 10px,#2a3140 20px); }
+    .btn.tel { background:transparent; }
+    .todo { background:#4a2530; color:#f2b8c0; }
+    footer.cta { background:#0d0f13; }
+  }
+</style>
+
+<div class="frame">
+  <div class="notice">📐 これは<strong>構成確認用のワイヤーフレーム</strong>です(完成デザインではありません)。文章は現時点の文案、<span class="todo">◯◯</span>は武さん確認待ちの箇所です。</div>
+
+  <section>
+    <span class="tag">ヘッダー</span>
+    <p><strong>トレル探偵社</strong> <span class="sub">|浮気調査/素行調査/人探し/企業調査/料金/事務所概要</span></p>
+    <p class="sub">右上に常時: [無料相談] [電話 <span class="todo">◯◯-◯◯◯◯-◯◯◯◯</span>]</p>
+    <div class="anno">スマホでは電話・LINEボタンを画面下に固定表示</div>
+  </section>
+
+  <section>
+    <span class="tag">ヒーロー(ファーストビュー)</span>
+    <h1>その不安、「調査すべきかどうか」から一緒に整理しませんか。</h1>
+    <p class="sub">秋葉原の探偵事務所・トレル探偵社。調査を熟知した担当者が、状況の整理から調査方法、調査後の対応までを見据えてご提案します。</p>
+    <p><strong>料金は総額表示 1時間19,800円(税込)〜</strong> <span class="sub">※車両費・交通費等の実費は別途</span></p>
+    <div class="cta-row">
+      <div class="btn primary">無料で相談する(24時間受付)</div>
+      <div class="btn line">LINEで相談</div>
+      <div class="btn tel">📞 電話する</div>
+    </div>
+    <p class="sub">ご相談いただいたからといって、調査を無理におすすめすることはありません。</p>
+    <div class="img" style="min-height:160px">背景写真: 事務所または街の夜景など(文字は載せない=テキストはHTMLで実装)</div>
+    <div class="anno">キャッチは「安さ」ではなく「状況整理から寄り添う」軸(武さん7/15確定方針)。価格は信頼要素として総額+実費注記をワンセット表記</div>
+  </section>
+
+  <section>
+    <span class="tag">共感</span>
+    <h2>こんな不安を抱えていませんか</h2>
+    <div class="cols">
+      <div class="card">配偶者の帰りが遅い日が増えた。問い詰める前に、事実を確かめたい</div>
+      <div class="card">探偵の料金がいくらかかるのか分からず怖い</div>
+      <div class="card">証拠が取れたとして、その後どうすればいいのか分からない</div>
+      <div class="card">大手で高額なパック契約をすすめられ、不信感が残った</div>
+    </div>
+    <p style="margin-top:12px"><strong>まず「調査が必要かどうか」の整理からお手伝いします。調査ありきのご提案はしません。</strong></p>
+  </section>
+
+  <section>
+    <span class="tag">選ばれる理由</span>
+    <h2>トレル探偵社が選ばれる3つの理由</h2>
+    <div class="cols">
+      <div class="card"><h3>① 調査を熟知した担当者が最初から最後まで</h3><p class="sub">受付から調査計画、報告まで一貫対応。営業専任が契約だけ取る体制ではありません。</p></div>
+      <div class="card"><h3>② 総額表示の明朗料金</h3><p class="sub">1時間あたり総額19,800円(税込)〜。実費も事前見積りで明示、無断の追加請求なし。</p></div>
+      <div class="card"><h3>③ 「調査のあと」まで見据えた提案</h3><p class="sub">結果をどう使うかまで考えて調査方法と報告の形を設計。<span class="todo">専門家連携の記載範囲は要確認</span></p></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">サービス</span>
+    <h2>調査サービス</h2>
+    <div class="cols">
+      <div class="card"><div class="img" style="min-height:70px">写真</div><h3>浮気調査</h3><p class="sub">不貞の事実確認と証拠取得 →</p></div>
+      <div class="card"><div class="img" style="min-height:70px">写真</div><h3>素行調査</h3><p class="sub">家族・従業員などの行動確認 →</p></div>
+      <div class="card"><div class="img" style="min-height:70px">写真</div><h3>人探し・所在調査</h3><p class="sub">音信不通の家族・知人の所在確認 →</p></div>
+      <div class="card"><div class="img" style="min-height:70px">写真</div><h3>企業・信用調査</h3><p class="sub">取引先・採用候補者の信用確認 →</p></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">料金</span>
+    <h2>料金</h2>
+    <p><span class="price">1時間あたり 総額19,800円(税込)〜</span><br><span class="sub">※車両費・交通費等の実費は別途/お見積りは無料</span></p>
+    <table>
+      <tr><th>プラン</th><th>料金(税込)</th><th>内容</th></tr>
+      <tr><td>ライトプラン</td><td>1時間 19,800円</td><td>事実確認のみ・報告書なし。費用を抑えたい方向け</td></tr>
+      <tr><td>スタンダードプラン</td><td>1時間 22,000円</td><td>調査報告書付き。標準的な浮気・素行調査はこちら</td></tr>
+    </table>
+    <div class="cta-row"><div class="btn tel">料金の詳細を見る →</div></div>
+    <div class="anno">「最安」「業界最低水準」等の比較ワードは使わない。旧「1時間4,400円(1名あたり)」表記は全廃</div>
+  </section>
+
+  <section>
+    <span class="tag">流れ</span>
+    <h2>ご相談から解決までの流れ</h2>
+    <ol class="flow">
+      <li><strong>無料相談</strong>(電話・LINE・フォーム)— 匿名でも可</li>
+      <li><strong>状況の整理とお見積り</strong> — ここまで費用0円</li>
+      <li><strong>ご契約・調査開始</strong> — 探偵業法に基づく書面を交付</li>
+      <li><strong>調査のご報告</strong> — 経過は随時、結果は報告書または面談で</li>
+      <li><strong>調査後のご相談</strong> — 今後の進め方まで担当者が対応</li>
+    </ol>
+  </section>
+
+  <section>
+    <span class="tag">FAQ</span>
+    <h2>よくあるご質問</h2>
+    <dl class="faq">
+      <dt>Q. 相談だけで費用はかかりますか?</dt><dd>A. かかりません。お見積りまで無料です。</dd>
+      <dt>Q. 調査していることが相手に知られませんか?</dt><dd>A. 秘匿性に細心の注意を払って計画します。ご連絡方法もご相談ください。</dd>
+      <dt>Q. 追加料金はありませんか?</dt><dd>A. 時間と実費は事前見積りで明示し、同意なく追加しません。</dd>
+    </dl>
+    <div class="anno">FAQスキーマ(構造化データ)を設定 → 検索結果でのリッチ表示狙い</div>
+  </section>
+
+  <section>
+    <span class="tag">事務所情報</span>
+    <h2>事務所情報</h2>
+    <p>トレル探偵社(探偵業届出: <span class="todo">◯◯公安委員会 第◯◯◯◯号</span>)</p>
+    <p class="sub">所在地: <span class="todo">東京都◯◯区◯◯(秋葉原駅 徒歩◯分)</span>/営業時間: <span class="todo">◯◯:◯◯〜◯◯:◯◯</span></p>
+    <div class="img">Googleマップ埋め込み(GBPと同一のNAP表記)</div>
+  </section>
+
+  <footer class="cta">
+    <h2>ひとりで抱え込む前に、まずは状況を聞かせてください。</h2>
+    <div class="cta-row" style="justify-content:center">
+      <div class="btn primary">無料で相談する</div>
+      <div class="btn line">LINEで相談</div>
+    </div>
+  </footer>
+</div>
