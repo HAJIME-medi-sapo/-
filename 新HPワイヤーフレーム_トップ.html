@@ -31,15 +31,21 @@
   .faq dd { margin:2px 0 0 0; color:var(--sub); }
   .todo { background:#fdeeee; color:#8a2b2b; border-radius:4px; padding:0 4px; font-size:12px; }
   footer.cta { background:var(--ink); color:#fff; border-radius:10px; padding:26px 22px; text-align:center; }
+  .card { background:var(--card-bg,#fbfcfe); } th { background:var(--th-bg,#eef2f7); }
   @media (prefers-color-scheme: dark) {
-    :root { --ink:#e8ebf1; --sub:#a7afbd; --line:#3a4150; --bg:#14171d; --box:#1d222b; }
-    .card { background:#232936; } th { background:#232936; }
-    .notice { background:#3a2f18; border-color:#6b5426; color:#e8c98a; }
-    .img { background:repeating-linear-gradient(45deg,#232936,#232936 10px,#2a3140 10px,#2a3140 20px); }
-    .btn.tel { background:transparent; }
-    .todo { background:#4a2530; color:#f2b8c0; }
-    footer.cta { background:#0d0f13; }
+    :root:not([data-theme="light"]) { --ink:#e8ebf1; --sub:#a7afbd; --line:#3a4150; --bg:#14171d; --box:#1d222b; --card-bg:#232936; --th-bg:#232936; }
+    :root:not([data-theme="light"]) .notice { background:#3a2f18; border-color:#6b5426; color:#e8c98a; }
+    :root:not([data-theme="light"]) .img { background:repeating-linear-gradient(45deg,#232936,#232936 10px,#2a3140 10px,#2a3140 20px); }
+    :root:not([data-theme="light"]) .btn.tel { background:transparent; }
+    :root:not([data-theme="light"]) .todo { background:#4a2530; color:#f2b8c0; }
+    :root:not([data-theme="light"]) footer.cta { background:#0d0f13; }
   }
+  :root[data-theme="dark"] { --ink:#e8ebf1; --sub:#a7afbd; --line:#3a4150; --bg:#14171d; --box:#1d222b; --card-bg:#232936; --th-bg:#232936; }
+  :root[data-theme="dark"] .notice { background:#3a2f18; border-color:#6b5426; color:#e8c98a; }
+  :root[data-theme="dark"] .img { background:repeating-linear-gradient(45deg,#232936,#232936 10px,#2a3140 10px,#2a3140 20px); }
+  :root[data-theme="dark"] .btn.tel { background:transparent; }
+  :root[data-theme="dark"] .todo { background:#4a2530; color:#f2b8c0; }
+  :root[data-theme="dark"] footer.cta { background:#0d0f13; }
 </style>
 
 <div class="frame">
