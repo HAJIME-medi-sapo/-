@@ -21,6 +21,9 @@ ZEIRITSU     = 0.43          # 個人の限界税率（所得税＋住民税）
 JOTO_ZEI     = 0.20315       # 長期譲渡所得税率（5年超）
 RENT_DECAY   = 0.010         # 賃料下落率（年）
 SETSUBI_RATIO= 0.00          # 建物附属設備の分離割合（内訳書入手後に0.15等へ）
+KOSU         = 15            # 戸数（15戸計画）
+KOUJI_UP     = 0.00          # 工事費の増額率（請負金額の上振れ想定）
+TOCHI_SENKO_M= 0             # 土地先行融資の月数（0なら土地建物一括実行）
 # ===============================================
 
 KAKAKU = TOCHI + KENMONO
@@ -104,6 +107,22 @@ print(f"  借入     {LOAN:>13,} 円 / {YEARS}年 / {RATE*100:.2f}%")
 print(f"  月返済   {M:>13,.0f} 円   年返済 {ANN:,.0f} 円")
 print(f"  総返済   {M*N:>13,.0f} 円   うち利息 {M*N-LOAN:,.0f} 円 (借入の{(M*N-LOAN)/LOAN*100:.1f}%)")
 print(f"  初年度償却 {dep_of(1):>11,.0f} 円")
+
+section("1b. 新築15戸企画としての追加論点")
+print(f"  戸数 {KOSU} 戸 / 工事費増額率 {KOUJI_UP*100:.1f}% / 土地先行融資 {TOCHI_SENKO_M} ヶ月")
+print(f"\n  【戸あたり必要賃料】")
+print(f"{'水準':<14}{'満室年収':>13}{'月/戸':>11}")
+_be = bisect(lambda g: noi_of(KAKAKU*g)-ANN, 0.01, 0.30)
+_d13 = bisect(lambda g: noi_of(KAKAKU*g)-ANN*1.3, 0.01, 0.30)
+for lab, g in [("税引前CF=0", _be), ("DSCR1.3", _d13), ("表面7.0%", 0.070),
+               ("表面8.0%", 0.080), ("表面9.0%", 0.090)]:
+    gross = KAKAKU * g
+    print(f"{lab:<12}{gross:>13,.0f}{gross/KOSU/12:>11,.0f}")
+if KOUJI_UP > 0:
+    _up = KENMONO * KOUJI_UP
+    print(f"\n  工事費増額 +{KOUJI_UP*100:.1f}% = +{_up:,.0f} 円 → 投下自己資金 {TOUKA:,} 円に対し {_up/TOUKA*100:.1f}%")
+if TOCHI_SENKO_M > 0:
+    print(f"  土地先行 {TOCHI_SENKO_M}ヶ月の金利負担（収入ゼロ期間）: {TOCHI*RATE*TOCHI_SENKO_M/12:,.0f} 円")
 
 section("2. 表面利回り別 保有中キャッシュフロー（1年目・税引前）")
 print(f"{'表面':>6}{'満室年収':>13}{'NOI':>13}{'返済':>13}{'税引前CF':>13}{'DSCR':>7}{'CCR':>8}")
